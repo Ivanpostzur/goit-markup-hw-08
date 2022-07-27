@@ -1,0 +1,10 @@
+.logo {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  @include f-size-height(26px, 1.19);
+}
+
+.logo__part,
+.logo:hover {
+  color: var(--acsent-color);
+}

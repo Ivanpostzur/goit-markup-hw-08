@@ -1,0 +1,61 @@
+.project {
+  display: flex;
+  align-items: stretch;
+}
+.project__card {
+  display: flex;
+  align-items: stretch;
+
+  flex-direction: column;
+}
+.project__content {
+  flex-grow: 1;
+  $border: 1px solid #eeeeee;
+
+  padding: 20px 24px;
+  border-right: $border;
+  border-bottom: $border;
+  border-left: $border;
+}
+
+.project__image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include square-size(100%);
+
+  transform: translateY(calc(100% + 1px));
+
+  transition: transform var(--shift);
+
+  padding: 63px 24px;
+
+  @include f-size-height(18px, 1.56);
+
+  color: var(--second-acsent-color);
+
+  background-color: var(--acsent-color-transparent);
+
+  .project:hover &,
+  .project:focus & {
+    transform: translateY(0);
+  }
+}
+
+.project__title {
+  margin-bottom: 4px;
+
+  @include text-title(700, 2);
+  font-size: 18px;
+
+  letter-spacing: 0.06em;
+}
+
+.project__type {
+  @include f-size-height(16px, 1.88);
+}

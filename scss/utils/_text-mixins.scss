@@ -1,0 +1,77 @@
+// .page
+
+@mixin text-custom($weiht, $size, $height, $spacing, $color) {
+  font-weight: $weiht;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  color: $color;
+}
+
+// .section__title
+// .form__title
+// .project__title
+// .feature__title
+
+@mixin text-title($weiht, $height) {
+  font-weight: $weiht;
+  // font-size: $size;
+  line-height: $height;
+  color: var(--tittle-text-color);
+  // text-align: $align;
+}
+
+// .footer__title
+// .hero__title
+// .what-we-do__title
+
+@mixin text-title-second($weiht) {
+  font-weight: $weiht;
+  // font-size: $size;
+  // line-height: $height;
+  text-transform: uppercase;
+  color: var(--second-acsent-color);
+  // text-align: $align;
+}
+
+// .filter-button
+// .home-button
+
+@mixin text-button($weiht, $size, $height, $color) {
+  font-family: inherit;
+  font-weight: $weiht;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+// .logo
+// .project__type
+// .member__overlay
+// .project__overlay
+// .subscribe__name
+// .form-box
+// .navigation__link
+// .contacts__link
+
+@mixin f-size-height($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin f-size-height-spacing($size, $height, $spacing) {
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin overlay {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--second-acsent-color);
+}
+
+@mixin acsent-color-fill {
+  color: var(--acsent-color);
+  fill: var(--acsent-color);
+}

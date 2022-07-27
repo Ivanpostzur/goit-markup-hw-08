@@ -1,0 +1,39 @@
+.clients {
+  @include flex-wrap;
+  margin: -15px;
+}
+
+.clients__item {
+  @media screen and (max-width: 767px) {
+    @include grid(2, 15px);
+  }
+
+  @media screen and (min-width: 768px) {
+    @include grid(3, 15px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include grid(6, 15px);
+  }
+}
+
+.clients__box {
+  @include centered-content-width-height(100%, 92px);
+
+  border: 1px solid var(--linc-fill-color);
+  border-radius: 4px;
+
+  fill: var(--linc-fill-color);
+
+  transition: border var(--shift), fill var(--shift);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--acsent-color);
+    fill: var(--acsent-color);
+  }
+}
+
+.clients__icon {
+  @include width-height(106px, 60px);
+}

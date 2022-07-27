@@ -1,0 +1,40 @@
+.projects__container {
+}
+
+.projects {
+  @media screen and (min-width: 768px) {
+    @include flex-wrap;
+    margin: -15px;
+  }
+}
+
+.projects__item {
+  display: flex;
+  align-items: stretch;
+
+  max-width: 450px;
+
+  @media screen and (max-width: 767px) {
+    & + & {
+      margin-top: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include grid(2, 15px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include grid(3, 15px);
+  }
+
+  background-color: var(--primary-bg-color);
+
+  transition: box-shadow var(--shift);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

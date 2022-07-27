@@ -1,0 +1,34 @@
+@import './utils/variables';
+@import './base/normalize';
+@import './base/change_of_desing';
+
+@import './utils/mixins';
+@import './utils/text-mixins';
+
+@import './components/page';
+
+@import './components/units/logo';
+@import './components/units/home-button';
+@import './components/units/social-links';
+
+@import './components/header';
+
+@import './components/hero';
+@import './components/feature';
+@import './components/what-we-do';
+@import './components/units/member';
+@import './components/team';
+@import './components/clients';
+
+@import './components/footer';
+
+@import './components/units/close-button';
+@import './components/units/form';
+@import './components/modal';
+
+@import './components/units/filter-button';
+@import './components/filter';
+@import './components/units/project';
+@import './components/projects';
+
+// @import './utils/hidden';

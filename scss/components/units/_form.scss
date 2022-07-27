@@ -1,0 +1,133 @@
+.form {
+  @include flex-wrap;
+}
+
+.form__title {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+
+  @include text-title(700, 1.15);
+  font-size: 20px;
+
+  text-align: center;
+}
+
+.form-box {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  @include f-size-height-spacing(12px, 1.5, 0.01em);
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.17;
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.form-box__input {
+  display: block;
+  @include block-width-height(100%, 40px);
+
+  padding-left: 42px;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  fill: var(--tittle-text-color);
+
+  border-radius: 4px;
+
+  transform: fill var(--shift), border-color var(--shift);
+
+  &:focus,
+  .form-box:hover &,
+  .form-box:focus & {
+    outline-color: var(--acsent-color);
+
+    border-color: var(--acsent-color);
+  }
+}
+
+.form-box__message {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+
+  &::placeholder {
+    line-height: 1.14x;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form-box__name {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-box__icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  @include block-width-height(18px, 18px);
+
+  fill: var(--tittle-text-color);
+
+  .form-box:hover &,
+  .form-box:focus &,
+  .form-box__input:focus + & {
+    fill: var(--acsent-color);
+  }
+}
+
+.form-policy {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+
+.form-policy__icon {
+  margin-right: 7px;
+
+  border: 2px solid;
+  border-radius: 2px;
+  border-color: #000000;
+  @include width-height(16px, 15px);
+  fill: #fff;
+
+  transition: fill var(--shift), border var(--shift);
+
+  .form-policy__checkbox:checked + & {
+    border: 0px;
+    fill: var(--acsent-color);
+  }
+
+  .form-policy__checkbox:focus + & {
+    border-color: var(--acsent-color);
+  }
+
+  .form-policy__checkbox:checked:focus + & {
+    outline: 1px solid;
+    outline-color: var(--tittle-text-color);
+  }
+}
+
+.form-policy__text {
+  @include f-size-height(12px, 1.17);
+
+  @media screen and (min-width: 1200px) {
+    @include f-size-height(14px, 1.71);
+  }
+}
+
+.form-policy__link {
+  text-decoration-line: underline;
+  color: var(--acsent-color);
+}

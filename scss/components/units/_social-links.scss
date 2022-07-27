@@ -1,0 +1,32 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links__item {
+  @include square-size(44px);
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  @include centered-content;
+  @include square-size(100%);
+  border-radius: 50%;
+
+  fill: var(--linc-fill-color);
+
+  transition: background-color var(--shift), fill var(--shift);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--acsent-color);
+  fill: var(--second-acsent-color);
+}
+
+.social-link__icon {
+  @include square-size(20px);
+}

@@ -1,0 +1,67 @@
+body {
+  &.modal-open {
+    overflow: hidden;
+  }
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+.page {
+  font-family: var(--primary-font);
+
+  @include text-custom(400, 14px, 1.71, 0.03em, var(--primari-text-color));
+
+  background-color: var(--primary-bg-color);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section--clipped {
+  padding-top: 0;
+}
+
+.section__title {
+  @include text-title(700, 1.17);
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-size: 28px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
+.section--undertone {
+  background-color: var(--second-bg-color);
+}

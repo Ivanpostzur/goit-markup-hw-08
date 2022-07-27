@@ -1,0 +1,91 @@
+// міксини блоку
+
+@mixin centered-Y-content {
+  // флекс з центруванням контенту по вертикалі
+  display: flex;
+  align-items: center;
+}
+
+@mixin centered-content {
+  // флекс з центруванням контенту посередині
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin column-center {
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin centered-content-width-height($width, $height) {
+  // флекс з центруванням контенту посередині з розмірами
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $width;
+  height: $height;
+}
+
+@mixin centered-content-square($side) {
+  // флекс з центруванням контенту посередині з розміром, квадратний
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $side;
+  height: $side;
+}
+
+@mixin block-width-height($width, $height) {
+  // блок + розміри блоку
+  display: block;
+  width: $width;
+  height: $height;
+}
+
+@mixin width-height($width, $height) {
+  // розміри блоку
+
+  width: $width;
+  height: $height;
+}
+
+@mixin square($side) {
+  display: block;
+  width: $side;
+  height: $side;
+}
+
+@mixin square-size($side) {
+  width: $side;
+  height: $side;
+}
+
+//міксини відступпппппів
+@mixin margin-gorizontal($size) {
+  margin-right: $size;
+  margin-left: $size;
+}
+
+@mixin margin-verlical($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
+// інші міксини
+
+// міксин сітки, ДОДАТИ "-$margin" БАТЬКІВСЬКОМУ ЕЛЕМЕНТУ
+@mixin grid($number, $margin) {
+  flex-basis: calc(100% / #{$number} - #{$margin} * 2);
+  margin: #{$margin};
+}

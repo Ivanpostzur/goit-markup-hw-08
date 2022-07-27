@@ -1,0 +1,30 @@
+.home-button {
+  display: flex;
+  min-width: 200px;
+  height: 50px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include text-button(700, 16px, 1.87, var(--second-acsent-color));
+
+  letter-spacing: 0.06em;
+
+  background-color: var(--acsent-color);
+
+  transition: background-color var(--shift);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+.home-button__icon {
+  @include square-size(24px);
+
+  fill: var(--second-acsent-color);
+
+  &--end {
+    margin-left: 10px;
+  }
+}
